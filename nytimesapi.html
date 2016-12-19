@@ -24,21 +24,25 @@
     <div id= "mainSearch">
       <form>
         Search term: <br>
-        <input type="text" name="searchTerm">
+        <input type="text" id="searchTerm">
         <br>
         Number of Records to Retrieve: <br>
-        <input type="text" name="recordsRetrieve">
+        <input type="text" id="recordsRetrieve">
         <br>
         Start Year (Optional): <br>
-        <input type="text" name="startYear">
+        <input type="text" id="startYear">
         <br>
         End Year (Optional): <br>
-        <input type="text" name="endYear">
+        <input type="text" id="endYear">
       </form> <br>
       <button id="searchButton">Search</button> <br>
        <br>
       <button id="clearButton">Clear Results</button>
     </div>
   </div>
+
+  <!-- Stores search output -->
+  <div id="output"></div>
+
 </body>
 </html>
