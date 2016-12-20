@@ -20,7 +20,11 @@ $.ajax({
 // Log result 
 // console.log(result); 
 // console.log(response); 
-// console.log(result.response.docs[0]); 
+// console.log(result.response.docs[0]);
+
+var article = result.response.docs
+
+$("#output").html(article); 
 
 
 	}); 
@@ -32,9 +36,18 @@ $.ajax({
 				method: 'GET', 
 			}).done(function(result) {
 
-			var article = result.response.docs[0];
+			var article = result.response.docs[0]
 
-			console.log(article); 
+			// $("#output").append(article); 
+
+			 console.log(article);
+			 // console log works with button push!  
+
+			 // $("<div>").attr("src", url);
+			 // results in Error 429 
+
+			// $("#output").prepend(article); 
+
 		});
 
 

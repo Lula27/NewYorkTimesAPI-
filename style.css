@@ -1,0 +1,14 @@
+body {
+	background: #ffffff; 
+	margin-left: : 10px;
+	padding-left: -100px;
+}
+
+#searchButton {
+	float: left; 
+}
+
+#clearButton {
+	clear: all; 
+	float: left; 
+}
