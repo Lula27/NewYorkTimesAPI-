@@ -13,12 +13,8 @@ h1 {
 }
 
 .jumbotron {
-	background-color: #1A237E; 
+	background-color: #01579B; 
 	 
-}
-
-.jumbotron h1 {
-	text-decoration-color: white;
 }
 
 
@@ -27,6 +23,5 @@ h1 {
 }
 
 #clearButton {
-	clear: all; 
-	float: left; 
+	margin-left: 5px; 
 }
