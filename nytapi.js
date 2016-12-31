@@ -16,6 +16,7 @@ $(document).ready(function() {
 		method: 'GET',
 	}).done(function(result) {
 		console.log(result);
+		$('#output').html(JSON.stringify(result)); 
 	}).fail(function(err) {
 		throw err; 
 	});
