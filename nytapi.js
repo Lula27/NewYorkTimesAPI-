@@ -3,24 +3,35 @@
 //  Retreiving NYT API using AJAX & JSON
 // Creating variables to access data 
 
+
+
 $(document).ready(function() { 
 
- 
-	var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
+	// Pick up search terms 
+	searchTerm = $("#searchButton").val().trim(); 
 
-	url += '?' + $.param({
-		'api-key': "9f47960a4f5d4a55b1a483a4b1a9524d"
-	});
-	$.ajax({
-		url: url, 
-		method: 'GET',
-	}).done(function(result) {
-		console.log(result);
-		$('#output').html(JSON.stringify(result)); 
-	}).fail(function(err) {
-		throw err; 
-	});
 	
+
+	$("#searchButton").click(function() {
+
+
+		var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
+
+		url += '?' + $.param({
+		'api-key': "9f47960a4f5d4a55b1a483a4b1a9524d"
+		});
+		$.ajax({
+			url: url, 
+			method: 'GET',
+		}).done(function(result) {
+			console.log(result);
+		// $('#output').html(JSON.stringify(result)); prints object onto page
+		}).fail(function(err) {
+			throw err; 
+		});
+	
+
+	}); 
 	
 	// console.log(url); 
 
