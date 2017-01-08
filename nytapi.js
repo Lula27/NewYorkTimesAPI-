@@ -27,7 +27,9 @@ $(document).ready(function(nytapi) {
 		var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
 
 		url += '?' + $.param({
-		'api-key': "9f47960a4f5d4a55b1a483a4b1a9524d"
+			'api-key': "9f47960a4f5d4a55b1a483a4b1a9524d",
+			'q': "searchTerm"
+			
 		});
 		$.ajax({
 			url: url, 
@@ -43,6 +45,10 @@ $(document).ready(function(nytapi) {
 		// $("#output").html(searchTerm);  
 		// $("#output").html(nResults);
 		// $("#output").html(endYear);  
+		console.log(url); 
+
+
+
 
 	}); 
 	
