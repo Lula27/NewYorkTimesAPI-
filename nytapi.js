@@ -5,15 +5,20 @@
 
 
 
-$(document).ready(function() { 
+$(document).ready(function(nytapi) { 
 
-	// Pick up search terms 
-	searchTerm = $("#searchButton").val().trim(); 
 
 	
 
-	$("#searchButton").click(function() {
+	// searchTerm.preventDefault(); 
+	
 
+	$("#searchButton").click(function(search) {
+
+		search.preventDefault()
+
+		// Pick up search terms written in form 
+		var searchTerm = $("#searchTerm").val().trim(); 
 
 		var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
 
@@ -29,11 +34,11 @@ $(document).ready(function() {
 		}).fail(function(err) {
 			throw err; 
 		});
-	
+
+		$("#output").html(searchTerm);  
 
 	}); 
 	
-	// console.log(url); 
 
 	// Create search query using dog as main parameter
 	// var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
