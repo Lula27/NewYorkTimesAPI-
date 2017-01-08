@@ -7,10 +7,6 @@
 
 $(document).ready(function(nytapi) { 
 
-
-	
-
-	// searchTerm.preventDefault(); 
 	
 
 	$("#searchButton").click(function(search) {
@@ -19,6 +15,14 @@ $(document).ready(function(nytapi) {
 
 		// Pick up search terms written in form 
 		var searchTerm = $("#searchTerm").val().trim(); 
+
+		// Pick up number of results selected by user
+		nResults = $("#recordsRetrieve").val(); 
+
+		// Pick up start/end year
+		startYear = $("#startYear").val().trim();
+
+		endYear = $("#endYear").val().trim();
 
 		var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
 
@@ -35,7 +39,10 @@ $(document).ready(function(nytapi) {
 			throw err; 
 		});
 
-		$("#output").html(searchTerm);  
+		// Test to see if values are working 
+		// $("#output").html(searchTerm);  
+		// $("#output").html(nResults);
+		// $("#output").html(endYear);  
 
 	}); 
 	
