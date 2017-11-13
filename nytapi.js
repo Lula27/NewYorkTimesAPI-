@@ -28,7 +28,7 @@ $(document).ready(function(nytapi) {
 
 		url += '?' + $.param({
 			'api-key': "9f47960a4f5d4a55b1a483a4b1a9524d",
-			'q': "searchTerm"
+			'q': searchTerm
 			
 		});
 		$.ajax({
